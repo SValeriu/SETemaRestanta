@@ -3,6 +3,7 @@ package Composite;
 import java.util.ArrayList;
 import java.util.List;
 
+import Exceptii.PlayerException;
 import Interfete.IHero;
 
 public class Player {
@@ -25,12 +26,12 @@ public class Player {
 	}
 	
 	// add friend
-	public void addFriend(Player p){
+	public void addFriend(Player p) throws PlayerException{
 		friends.add(p);
 	}
 	
 	//remove friend
-	public void removeFriend(Player p){
+	public void removeFriend(Player p) throws PlayerException{
 		friends.remove(p);
 	}
 	
@@ -40,12 +41,12 @@ public class Player {
 	}
 	
 	//add character
-	public void addCharacter(IHero h){
+	public void addCharacter(IHero h) throws PlayerException{
 		characters.add(h);
 	}
 	
 	//remove character
-	public void removeCharacter(IHero h){
+	public void removeCharacter(IHero h) throws PlayerException{
 		characters.remove(h);
 	}
 	

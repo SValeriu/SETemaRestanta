@@ -1,6 +1,8 @@
 package Interfete;
 
+import Exceptii.HeroException;
+
 public interface IHero {
-	void attack();
+	void attack() throws HeroException;
 	String toString();
 }

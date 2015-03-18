@@ -19,28 +19,36 @@ public class Main {
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 
+		//factory pattern
 		HeroFactory object = HeroFactory.getInstance();
 		
 		IHero warrior = object.getHero("Warrior");
-		warrior.attack();
-		
 		IHero hunter = object.getHero("Hunter");
-		hunter.attack();
-		
 		IHero warlock = object.getHero("WarloCK");
-		warlock.attack();
+		try{
+			warrior.attack();
+			hunter.attack();
+			warlock.attack();
+		}
+		catch(Exception e){
+			System.out.println(e);
+		}
 		
-		
+		//composite pattern
 		Player player1 = new Player("Nighthunter", "nighthunter@mail.com");
 		Player player2 = new Player("Friend1", "friend1@mail.com");
 		Player player3 = new Player("Friend2", "friend2@mail.com");
 		
-		
-		player1.addFriend(player2);
-		player1.addFriend(player3);
+		try{
+			player1.addFriend(player2);
+			player1.addFriend(player3);
 
-		player1.addCharacter(hunter);
-		player1.addCharacter(warlock);
+			player1.addCharacter(hunter);
+			player1.addCharacter(warlock);
+		}
+		catch(Exception e){
+			System.out.println(e);
+		}
 		
 		System.out.println("\nFriend list:");
 		for(Player p : player1.getFriendList()){

@@ -9,4 +9,7 @@ public class Warrior implements IHero {
 		System.out.println("Warrior attacks with sword");
 	}
 
+	public String toString(){
+		return ("Warrior");
+	}
 }

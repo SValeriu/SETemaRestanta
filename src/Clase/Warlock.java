@@ -9,4 +9,7 @@ public class Warlock implements IHero {
 		System.out.println("Warlock attacks with magic");
 	}
 
+	public String toString(){
+		return ("Warlock");
+	}
 }
